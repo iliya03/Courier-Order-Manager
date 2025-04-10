@@ -7,7 +7,7 @@ function App() {
 
 //importing the list of products from the packageoptimizer
   useEffect(() => {
-    fetch('https://courier-order-manager-ui.vercel.app/api/products')
+    fetch('https://courier-order-manager-gi1jx407w-iliya-fathmas-projects.vercel.app/api/products')
       .then(res => res.json())
       .then(data => setProducts(data))
       .catch(err => console.error('Error fetching products:', err));
@@ -20,7 +20,7 @@ function App() {
   };
 
   const placeOrder = () => {
-    fetch('https://courier-order-manager-ui.vercel.app/api/place-order', {
+    fetch('https://courier-order-manager-gi1jx407w-iliya-fathmas-projects.vercel.app/api/place-order', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ items: selected }),
