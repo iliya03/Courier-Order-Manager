@@ -7,7 +7,7 @@ function App() {
 
 //importing the list of products from the packageoptimizer
   useEffect(() => {
-    fetch('http://localhost:3001/api/products')
+    fetch('https://courier-order-manager-ui.vercel.app/api/products')
       .then(res => res.json())
       .then(data => setProducts(data))
       .catch(err => console.error('Error fetching products:', err));
@@ -20,7 +20,7 @@ function App() {
   };
 
   const placeOrder = () => {
-    fetch('http://localhost:3001/api/place-order', {
+    fetch('https://courier-order-manager-ui.vercel.app/api/place-order', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ items: selected }),
